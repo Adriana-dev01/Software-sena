@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l \"/c/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\")",
+      "Bash(unzip -o \"/c/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\" -d \"/c/temp/backend_src\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(unzip -o \"C:/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\" -d \"C:/temp/backend_analysis\")",
+      "Bash(cd /tmp)",
+      "Bash(unzip -o \"C:/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\" -d backend_noticias)",
+      "Bash(unzip -l \"C:/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\")",
+      "Bash(rm -rf backend_noticias)",
+      "Bash(unzip -q \"C:/2026-1/repositorio aplicaciones sena/software-management-api/software-management-api/src.zip\" -d backend_noticias)",
+      "Bash(grep -E \"\\\\.\\(ts|js\\)$\")",
+      "WebFetch(domain:wysiwyghtml.com)"
+    ]
+  }
+}
