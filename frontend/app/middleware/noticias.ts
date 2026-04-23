@@ -8,7 +8,7 @@ export default defineNuxtRouteMiddleware(() => {
     return navigateTo('/login')
   }
 
-  if (authStore.user?.role !== 'noticias') {
+  if (authStore.user?.role !== 'noticias' && authStore.user?.role !== 'super_admin') {
     return navigateTo('/dashboard')
   }
 })

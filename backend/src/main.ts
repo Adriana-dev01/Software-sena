@@ -5,7 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/http-exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
-import * as helmet from 'helmet';
+
 
 async function bootstrap() {
   const logger = new Logger('Bootstrap');
@@ -14,10 +14,6 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const port = configService.get<number>('app.port');
   const corsOrigin = configService.get<string>('app.corsOrigin');
-
-  // Seguridad
- // app.use(helmet());
-
   // CORS
   app.enableCors({
     origin: corsOrigin,
@@ -66,7 +62,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
 
-  await app.listen(3000);
+  await app.listen(port ?? 3000);
 
   logger.log(`🚀 Aplicación corriendo en: http://localhost:${port}/api`);
   logger.log(

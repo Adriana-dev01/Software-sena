@@ -147,7 +147,7 @@ const local = reactive({
   tags: '',
   autores: '',
   urlAplicacion: '',
-  estado: 'ACTIVO',
+  estado: 'activo',
   valoracion: 0,
   urlImagen: '',
 })

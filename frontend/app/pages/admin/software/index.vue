@@ -109,7 +109,7 @@ const headers = [
 ]
 
 function coverImage(urlImagen: string) {
-  if (!urlImagen) return 'https://via.placeholder.com/44?text=?'
+  if (!urlImagen) return 'https://placehold.co/44x44?text=?'
   return urlImagen.split(',')[0].trim()
 }
 
